@@ -1,0 +1,66 @@
+---
+---
+
+::selection {background: #fcd700; color: #fff; text-shadow: none;}
+a:link {-webkit-tap-highlight-color: #fcd700;}
+
+body {
+	background-color: black;
+	color: white;
+	font-size: 26px;
+	font-family: "Merriweather", serif;
+	padding: 1em;
+}
+
+svg {
+	width: 5em;
+	position: fixed;
+	z-index: 3;
+}
+
+.location {
+	display: flex;
+	.location-title {
+		width: 10em;
+		margin-right: 1em;
+		h2 {
+			font-size: 1em;
+			position: -webkit-sticky;
+			top: 5em;
+			font-weight: 300;
+			font-style: italic;
+		}
+	}
+}
+.photos {
+	display: flex;
+	flex-direction: column;
+	.photo {
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		margin: 1.5em 0;
+		.description {
+			font-size: .5em;
+			width: 16em;
+			padding: 1em;
+			margin-left: 1em;
+			color: white;
+			flex-shrink: 0;
+		}
+		img {
+			max-height: 95vh;
+		}
+		hr {
+			margin: 3em 0;
+		}
+	}
+}
+
+/* Media queries
+-------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 480px) {
+
+
+}
