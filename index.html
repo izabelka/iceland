@@ -1,98 +1,67 @@
 ---
 locations:
   - name: "Day 1: Grindavik"
-    photo-from: 1
-    photo-to: 3
+    count: 3
   - name: "Day 1: Reykjavik"
-    photo-from: 4
-    photo-to: 11
+    count: 8
   - name: "Day 1: Reykiavik - Selfoss"
-    photo-from: 12
-    photo-to: 17
+    count: 6
   - name: "Day 1: Seljalandsfoss"
-    photo-from: 18
-    photo-to: 20
+    count: 3
   - name: "Day 1: Thorsmork"
-    photo-from: 21
-    photo-to: 32
+    count: 12
   - name: "Day 2: Plane Wreck"
-    photo-from: 33
-    photo-to: 37
+    count: 5
   - name: "Day 2: Vik"
-    photo-from: 38
-    photo-to: 45
+    count: 8
   - name: "Day 2: Vik - Hofn"
-    photo-from: 46
-    photo-to: 52
+    count: 6
   - name: "Day 2: Jökulsárlón"
-    photo-from: 53
-    photo-to: 56
+    count: 4
   - name: "Day 2: Hofn - Djúpivogur"
-    photo-from: 57
-    photo-to: 64
+    count: 8
   - name: "Day 2: Djúpivogur"
-    photo-from: 65
-    photo-to: 69
+    count: 5
   - name: "Day 3: Oxi Pass"
-    photo-from: 70
-    photo-to: 75
+    count: 6
   - name: "Day 3: Seydisfjordur"
-    photo-from: 76
-    photo-to: 81
+    count: 6
   - name: "Day 4: Road 93"
-    photo-from: 82
-    photo-to: 87
+    count: 6
   - name: "Day 4: Something"
-    photo-from: 88
-    photo-to: 93
+    count: 6
   - name: "Day 4: Dettifoss"
-    photo-from: 94
-    photo-to: 96
+    count: 3
   - name: "Day 4: Krafla"
-    photo-from: 97
-    photo-to: 108
+    count: 12
   - name: "Day 4: Vogafjos"
-    photo-from: 109
-    photo-to: 111
+    count: 3
   - name: "Day 4: Akureri"
-    photo-from: 112
-    photo-to: 116
+    count: 5
   - name: "Day 5: Akureri - Somewhere"
-    photo-from: 117
-    photo-to: 121
+    count: 6
   - name: "Day 5: Seals Spot"
-    photo-from: 122
-    photo-to: 127
+    count: 5
   - name: "Day 5: Road 60"
-    photo-from: 128
-    photo-to: 131
+    count: 4
   - name: "Day 6: Into Fjords"
-    photo-from: 132
-    photo-to: 135
+    count: 4
   - name: "Day 6: BA 64"
-    photo-from: 136
-    photo-to: 143
+    count: 8
   - name: "Day 6: Westermost Fjord"
-    photo-from: 144
-    photo-to: 153
+    count: 10
   - name: "Day 6: More Fjords"
-    photo-from: 154
-    photo-to: 161
+    count: 8
   - name: "Day 7: Arctic Fox in Heydalur"
-    photo-from: 162
-    photo-to: 164
+    count: 3
   - name: "Day 7: To ION"
-    photo-from: 165
-    photo-to: 168
+    count: 4
   - name: "Day 7: ION Hotel"
-    photo-from: 169
-    photo-to: 177
+    count: 9
   - name: "Day 8: Back in Reykjavik for more of the same!"
-    photo-from: 178
-    photo-to: 185
+    count: 8
   - name: "Day 8: KEF"
-    photo-from: 186
-    photo-to: 190
+    count: 5
 descriptions:
   - photo: 1
     text: "The main throguhway in iceland is called Road 1. Most of the other roads are poorly maintained."
@@ -139,13 +108,16 @@ descriptions:
 		<circle id="point" fill="#FF0000" cx="382" cy="504" r="25"></circle>
 	</svg>
 
+	{% assign count = 0 %}
 	{% for location in page.locations %}
 		<div class="location">
 			<div class="location-title">
 				<h2>{{location.name}}</h2>
 			</div>
 			<div class="photos">
-				{% for i in ({{location.photo-from}}..{{location.photo-to}}) %}
+				{% assign from = count | plus: 1 %}
+				{% assign to = count | plus: location.count %}
+				{% for i in (from..to) %}
 					<div class="photo">
 						<div class="photo-container">
 							<img src="photos/{{i}}.jpg">
@@ -159,6 +131,7 @@ descriptions:
 						{% endfor %}
 					</div>
 				{% endfor %}
+				{% assign count = count | plus: location.count %}
 			</div>
 		</div>
 		<hr>
