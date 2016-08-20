@@ -1,4 +1,2 @@
-- Fix photos numbering
-- Change to photos-count
 - Add proper titles
 - Add descriptions
