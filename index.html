@@ -64,7 +64,13 @@ locations:
     count: 5
 descriptions:
   - photo: 1
-    text: "The main throguhway in iceland is called Road 1. Most of the other roads are poorly maintained."
+    text: "We started our travel in a small place called Grindavík, near the airport."
+  - photo: 3
+    text: "First culinary stop was Bryggjan cafe, with the most charming host."
+  - photo: 4
+    text: "This kid is not having it, alas Reykjavik Roasters serves truly amazing, top-notch coffee."
+  - photo: 6
+    text: "Hallgrimskirkja cathedral"
 ---
 
 <!doctype html>
@@ -124,11 +130,10 @@ descriptions:
 						</div>
 						{% for description in page.descriptions %}
 							{% if i == description.photo %}
-								<span class="description">{{description.text}}</span>
-							{% else %}
-								<span class="description"></span>
+								{% assign d = description.text %}
 							{% endif %}
 						{% endfor %}
+						<span class="description">{{d}}</span>
 					</div>
 				{% endfor %}
 				{% assign count = count | plus: location.count %}
