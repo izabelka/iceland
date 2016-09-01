@@ -164,26 +164,52 @@ descriptions:
     text: "This kid is not having it, alas Reykjavik Roasters serves truly amazing, top-notch coffee."
   - photo: 7
     text: "Hallgrimskirkja cathedral"
-  - photo: 12
-    text: "There are more animals than people living on the island. We saw a lot of sheeps and horses."
-  - photo: 14
-    text: "The landscapes are breathtaking."
   - photo: 16
-    text: "Hot dogs are very popular in Iceland. They are made from lamb meat."
+    text: "Hot dogs are very popular in Iceland, and taste a little different thanks to the lamb meat."
   - photo: 18
-    text: "Seljalandsfoss is one of the best known waterfalls in Iceland and the first one we saw during our trip."
+    text: "Seljalandsfoss was the first one of many we saw during the trip."
+  - photo: 20
+    text: "This one is special because you can walk behind it."
+  - photo: 21
+    text: "Towards the end of the day we got off the main road, and onto the F249."
+  - photo: 22
+    text: "A bulldozer ready to pull cars stuck in the river (no, really)."
   - photo: 23
-    text: "We drove off-road a lot, but there were places one simply can't cross, like Krossa River which is wide and can be dangerous."
-  - photo: 26
-    text: "We spent our second night in Volcano Huts in Þórsmörk where we went hiking."
+    text: "Krossa, a glacial river is famous for devouring cars. There's a small parking, and a huge 4x4 bus takes you over it instead."
+  - photo: 25
+    text: "Þórsmörk has some of the most beautiful hiking trails out there."
   - photo: 27
-    text: "We saw famous Eyjafjallajökull volcano,"
-  - photo: 28
-    text: "and Krossa River."
+    text: "You can clearly see the infamous Eyjafjallajökull volcano."
+  - photo: 29
+    text: "Oops, I didn't rewind far enough after starting a new roll. This view is cool enough though, that I kept it anyway."
+  - photo: 32
+    text: "Þórsmörk really was a breathtaking, stunning place. It was sad to leave it the next day."
   - photo: 33
-    text: "The next day, we took a 4km walk to see a plane wreck."
+    text: "Next day, we went to see the DC-3 plane wreck. Little did we know, it turned out to be a 4 kilmeter (each way) walk through the middle of nowhere."
   - photo: 37
-    text: "In 1973 a United States Navy Douglas Super DC-3 airplane crashed on Sólheimasandur’s black sand beach. All crew members survived, but airplane was abandoned."
+    text: "In 1973 a United States Navy Douglas Super DC-3 airplane crashed on Sólheimasandur’s black sand beach. Crew survived, and the airplane was abandoned."
+  - photo: 39
+    text: "Black beach seen from the cliffs of Dyrhólaey"
+  - photo: 40
+    text: "Dyrhólaey literally means 'the hill-island with the door-hole'"
+  - photo: 43
+    text: "Reynisdrangar sea stacks."
+  - photo: 48
+    text: "A monument of the collapsed Skeiðará Bridge, which got destroyed by the glacial flood back in 1996."
+  - photo: 50
+    text: "Svartifoss waterfall, surrounded by geometrical lava columns."
+  - photo: 52
+    text: "Jökulsárlón is a lake that serves as the buffer zone between nearby glacier and the ocean."
+  - photo: 55
+    text: "Icebergs slowly making their way into the ocean."
+  - photo: 62
+    text: "Laekjavik coast, which it's cubical rock. Iceland's landscape has a thing for gemoterical shapes for sure."
+  - photo: 64
+    text: "The ghostly shade of the film is the result of careless development, I think. The effect is supprisingly nice, though."
+  - photo: 67
+    text: "Djúpivogur, like all small towns in Iceland has a very sleepy, pleasant nature."
+  - photo: 72
+    text: "Öxi Pass is one of the prettiest roads in Iceland, swerving through mountains and valleys, with plenty of opportunities for small detours."
 ---
 
 <!doctype html>
@@ -240,6 +266,7 @@ descriptions:
 					<div class="photo">
 						<div class="photo-container">
 							<img src="photos/{{i}}.jpg">
+                            <span>{{i}}</span>
 						</div>
             {% for description in page.descriptions %}
               {% if i == description.photo %}

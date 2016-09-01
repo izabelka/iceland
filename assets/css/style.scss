@@ -18,6 +18,10 @@ svg {
 	z-index: 3;
 }
 
+#point {
+	transition: .2s;
+}
+
 .location {
 	display: flex;
 	.location-title {

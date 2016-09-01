@@ -1,2 +1,3 @@
-- Add proper titles
-- Add descriptions
+- finish descriptions
+- create header introduction
+- add footer (camera + film + us + thanks)
