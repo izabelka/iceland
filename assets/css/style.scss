@@ -33,14 +33,15 @@ header {
 	}
 }
 
-#map {
-	width: 5em;
-	position: fixed;
-	z-index: 3;
-}
-
 #point {
 	transition: .2s;
+}
+
+svg#map {
+	width: 5em;
+	position: fixed;
+	top: 1em;
+	z-index: 3;
 }
 
 .location {
